@@ -1,0 +1,163 @@
+{
+  "title": "Springbloom Home Vault",
+  "address": "[home address], Millersville MD 21108",
+  "version": 1,
+  "note": "EXAMPLE appliance records for Boyd household. Replace models/serials with real ones. Filter due dates and service log live in localStorage.",
+  "appliances": [
+    {
+      "id": "hvac",
+      "name": "Central HVAC",
+      "category": "Climate",
+      "brand": "EXAMPLE Carrier",
+      "model": "EXAMPLE 24ACC636A003",
+      "serial": "EXAMPLE-HVAC-2019-0042",
+      "installed": "2019-06",
+      "location": "Basement utility",
+      "manualHint": "Furnace + outdoor condenser. Filter slot behind return grille.",
+      "notes": "EXAMPLE placeholder — Boyd fills real model/serial."
+    },
+    {
+      "id": "water-heater",
+      "name": "Water heater",
+      "category": "Plumbing",
+      "brand": "EXAMPLE Rheem",
+      "model": "EXAMPLE XE50T10HS45U0",
+      "serial": "EXAMPLE-WH-2021-1188",
+      "installed": "2021-03",
+      "location": "Basement",
+      "manualHint": "50-gal electric. Shutoff and breaker labeled on panel.",
+      "notes": "EXAMPLE placeholder."
+    },
+    {
+      "id": "fridge",
+      "name": "Kitchen fridge",
+      "category": "Kitchen",
+      "brand": "EXAMPLE GE Profile",
+      "model": "EXAMPLE PFE28KYNFS",
+      "serial": "EXAMPLE-FR-2020-7731",
+      "installed": "2020-09",
+      "location": "Kitchen",
+      "manualHint": "Water filter in upper right of fridge compartment.",
+      "notes": "EXAMPLE placeholder."
+    },
+    {
+      "id": "washer",
+      "name": "Washer",
+      "category": "Laundry",
+      "brand": "EXAMPLE LG",
+      "model": "EXAMPLE WM4000HWA",
+      "serial": "EXAMPLE-WA-2018-5520",
+      "installed": "2018-11",
+      "location": "Laundry",
+      "manualHint": "Front-load. Clean gasket monthly; leave door ajar after loads.",
+      "notes": "EXAMPLE placeholder."
+    },
+    {
+      "id": "dryer",
+      "name": "Dryer",
+      "category": "Laundry",
+      "brand": "EXAMPLE LG",
+      "model": "EXAMPLE DLEX4000W",
+      "serial": "EXAMPLE-DR-2018-5521",
+      "installed": "2018-11",
+      "location": "Laundry",
+      "manualHint": "Lint trap every load; duct clean yearly.",
+      "notes": "EXAMPLE placeholder."
+    },
+    {
+      "id": "powerwall",
+      "name": "Powerwall / solar (optional)",
+      "category": "Energy",
+      "brand": "EXAMPLE Tesla / solar inverter",
+      "model": "EXAMPLE Powerwall 2 + SolarEdge",
+      "serial": "EXAMPLE-PW-OPTIONAL",
+      "installed": "—",
+      "location": "Garage / exterior",
+      "manualHint": "Optional placeholder if Springbloom adds storage. Pair with Powerwall Solar board.",
+      "notes": "EXAMPLE optional slot — leave blank or delete if not installed."
+    }
+  ],
+  "filters": [
+    {
+      "id": "hvac-filter",
+      "applianceId": "hvac",
+      "name": "HVAC return filter",
+      "size": "EXAMPLE 16×25×1",
+      "intervalMonths": 3,
+      "defaultNextDue": "2026-11-15",
+      "notes": "Change every ~3 months. Size is EXAMPLE — measure slot."
+    },
+    {
+      "id": "fridge-filter",
+      "applianceId": "fridge",
+      "name": "Fridge water filter",
+      "size": "EXAMPLE RPWFE / GE XWFE",
+      "intervalMonths": 6,
+      "defaultNextDue": "2026-12-01",
+      "notes": "EXAMPLE cartridge family — confirm against real model."
+    },
+    {
+      "id": "dryer-lint",
+      "applianceId": "dryer",
+      "name": "Dryer lint + duct check",
+      "size": "n/a (trap + duct)",
+      "intervalMonths": 12,
+      "defaultNextDue": "2027-03-01",
+      "notes": "Trap every load; full duct inspect yearly."
+    }
+  ],
+  "warranties": [
+    {
+      "id": "w-hvac",
+      "applianceId": "hvac",
+      "label": "HVAC parts & labor",
+      "provider": "EXAMPLE installer warranty",
+      "starts": "2019-06-01",
+      "ends": "2029-06-01",
+      "notes": "EXAMPLE 10-year parts window — verify paper/PDF."
+    },
+    {
+      "id": "w-wh",
+      "applianceId": "water-heater",
+      "label": "Water heater tank",
+      "provider": "EXAMPLE Rheem limited",
+      "starts": "2021-03-15",
+      "ends": "2027-03-15",
+      "notes": "EXAMPLE — register serial when you have the real unit."
+    },
+    {
+      "id": "w-fridge",
+      "applianceId": "fridge",
+      "label": "Fridge manufacturer",
+      "provider": "EXAMPLE GE",
+      "starts": "2020-09-10",
+      "ends": "2025-09-10",
+      "notes": "EXAMPLE expired placeholder — replace with real dates or extended plan."
+    },
+    {
+      "id": "w-washer",
+      "applianceId": "washer",
+      "label": "Washer + dryer pair",
+      "provider": "EXAMPLE LG / store plan",
+      "starts": "2018-11-20",
+      "ends": "2026-11-20",
+      "notes": "EXAMPLE — check store extended coverage."
+    }
+  ],
+  "serviceSeed": [
+    {
+      "id": "svc-1",
+      "date": "2026-04-12",
+      "applianceId": "hvac",
+      "title": "Spring tune-up (EXAMPLE)",
+      "detail": "EXAMPLE entry — coil clean, amp draw check."
+    },
+    {
+      "id": "svc-2",
+      "date": "2025-10-03",
+      "applianceId": "hvac",
+      "title": "Filter swap (EXAMPLE)",
+      "detail": "EXAMPLE — installed 16×25×1 MERV-11."
+    }
+  ]
+}

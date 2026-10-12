@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home Vault · Springbloom</title>
+<meta name="theme-color" content="#0f172a">
+<meta name="description" content="Household appliance and warranty vault for [home address] — manuals, filter sizes, and service dates. Offline TokenMax board.">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 48 48" width="44" height="44">
+        <defs>
+          <linearGradient id="vg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#94a3b8"/>
+            <stop offset="1" stop-color="#38bdf8"/>
+          </linearGradient>
+        </defs>
+        <rect x="6" y="10" width="36" height="28" rx="6" fill="#1e293b" stroke="url(#vg)" stroke-width="2.2"/>
+        <rect x="12" y="16" width="10" height="8" rx="1.5" fill="#64748b"/>
+        <rect x="26" y="16" width="10" height="8" rx="1.5" fill="#475569"/>
+        <path d="M14 30h20" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="36" cy="30" r="2.2" fill="#94a3b8"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Home Vault</h1>
+      <p class="tag">[home address] · Millersville MD · appliances · filters · warranties</p>
+    </div>
+  </div>
+  <div class="top-actions">
+    <span class="pill steel" id="addrPill">Springbloom</span>
+    <span class="pill accent" id="duePill">Filters</span>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Vault screens">
+  <button class="tab active" data-view="appliances" role="tab" aria-selected="true">⚙ Appliances</button>
+  <button class="tab" data-view="filters" role="tab" aria-selected="false">▣ Filters</button>
+  <button class="tab" data-view="warranties" role="tab" aria-selected="false">📋 Warranties</button>
+  <button class="tab" data-view="service" role="tab" aria-selected="false">🛠 Service log</button>
+  <button class="tab" data-view="about" role="tab" aria-selected="false">About</button>
+</nav>
+
+<main>
+  <section id="view-appliances" class="view active" role="tabpanel">
+    <div class="hero panel">
+      <p class="eyebrow">Household board</p>
+      <h2 class="view-title">Appliances at Springbloom</h2>
+      <p class="lede">EXAMPLE models and serials — Boyd replaces with real ones. Manuals and filter sizes live with each card. Nothing leaves this device.</p>
+      <div class="stat-row" id="statRow"></div>
+    </div>
+    <div id="applianceRoot" class="card-grid"></div>
+  </section>
+
+  <section id="view-filters" class="view" role="tabpanel">
+    <div class="panel">
+      <h2 class="view-title">Filter size reminders</h2>
+      <p class="lede">Next-due dates save in localStorage. Sizes marked EXAMPLE until you measure the real slot.</p>
+      <div id="filterRoot" class="stack"></div>
+    </div>
+  </section>
+
+  <section id="view-warranties" class="view" role="tabpanel">
+    <div class="panel">
+      <h2 class="view-title">Warranty expiry timeline</h2>
+      <p class="lede">EXAMPLE coverage windows — verify against paperwork or manufacturer portals.</p>
+      <div id="warrantyRoot" class="timeline"></div>
+    </div>
+  </section>
+
+  <section id="view-service" class="view" role="tabpanel">
+    <div class="panel">
+      <h2 class="view-title">Service log</h2>
+      <p class="lede">Tune-ups and filter swaps stay on this device. Seed entries are EXAMPLE.</p>
+      <form id="serviceForm" class="service-form">
+        <label>Date <input type="date" id="svcDate" required></label>
+        <label>Appliance
+          <select id="svcAppliance" required></select>
+        </label>
+        <label class="grow">Title <input type="text" id="svcTitle" maxlength="80" placeholder="e.g. Filter swap" required></label>
+        <label class="full">Detail <input type="text" id="svcDetail" maxlength="160" placeholder="Optional notes"></label>
+        <button type="submit" class="btn primary">Add entry</button>
+      </form>
+      <div id="serviceRoot" class="stack"></div>
+    </div>
+  </section>
+
+  <section id="view-about" class="view" role="tabpanel">
+    <div class="panel">
+      <h2 class="view-title">About Home Vault</h2>
+      <p class="lede">Offline TokenMax burn build for Christopher Boyd — [home address], Millersville MD 21108. Synthetic appliance serials and models are labeled <strong>EXAMPLE</strong>.</p>
+      <ul class="about-list">
+        <li>Tabs: Appliances · Filters · Warranties · Service log · About</li>
+        <li>Filter due dates + service log → <code>localStorage</code> key <code>home-vault-v1</code></li>
+        <li>Data seed: <code>data/appliances.json</code> inlined into <code>dist/home-vault.html</code></li>
+        <li>Serve: <code>./run.sh</code> → http://127.0.0.1:4327/</li>
+      </ul>
+      <div class="about-actions">
+        <button type="button" class="btn ghost" id="btnExport">Export JSON</button>
+        <button type="button" class="btn ghost danger" id="btnReset">Reset local data</button>
+      </div>
+      <pre id="exportBox" class="export-box hidden"></pre>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">Home Vault · Springbloom · TokenMax · EXAMPLE data until Boyd fills real models</footer>
+
+<script>
+window.__VAULT__ = /*__VAULT__*/ null /*__/VAULT__*/;
+/*__APP__*/
+</script>
+</body>
+</html>
