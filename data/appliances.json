@@ -1,8 +1,8 @@
 {
-  "title": "Springbloom Home Vault",
-  "address": "[home address], Millersville MD 21108",
+  "title": "Oak Street Home Vault",
+  "address": "[home address], Lakeside MD 01234",
   "version": 1,
-  "note": "EXAMPLE appliance records for Boyd household. Replace models/serials with real ones. Filter due dates and service log live in localStorage.",
+  "note": "EXAMPLE appliance records for Rivera household. Replace models/serials with real ones. Filter due dates and service log live in localStorage.",
   "appliances": [
     {
       "id": "hvac",
@@ -14,7 +14,7 @@
       "installed": "2019-06",
       "location": "Basement utility",
       "manualHint": "Furnace + outdoor condenser. Filter slot behind return grille.",
-      "notes": "EXAMPLE placeholder — Boyd fills real model/serial."
+      "notes": "EXAMPLE placeholder — Alex fills real model/serial."
     },
     {
       "id": "water-heater",
@@ -73,7 +73,7 @@
       "serial": "EXAMPLE-PW-OPTIONAL",
       "installed": "—",
       "location": "Garage / exterior",
-      "manualHint": "Optional placeholder if Springbloom adds storage. Pair with Powerwall Solar board.",
+      "manualHint": "Optional placeholder if Oak Street adds storage. Pair with Powerwall Solar board.",
       "notes": "EXAMPLE optional slot — leave blank or delete if not installed."
     }
   ],

@@ -1,6 +1,6 @@
 # Home Vault
 
-Household appliance and warranty vault for **[home address], Millersville MD** — manuals, filter sizes, and service dates in one offline board. TokenMax burn build.
+Household appliance and warranty vault for **[home address], Lakeside MD** — manuals, filter sizes, and service dates in one offline board. TokenMax burn build.
 
 EXAMPLE appliances (HVAC, water heater, fridge, washer, dryer, optional Powerwall/solar). Filter next-due and service log in `localStorage`.
 
@@ -32,7 +32,7 @@ Offline single file: `dist/home-vault.html`
 
 ---
 ## Repo notes
-- **Built:** Oct 2026 (TokenMax build week; see SHORTLIST/ledger), by TokenMax (Boyd's Grok Bot) on the Grok Bot box.
+- **Built:** Oct 2026 (TokenMax build week; see SHORTLIST/ledger), by TokenMax (Alex's Grok Bot) on the Grok Bot box.
 - **Run:** `./run.sh` (then open the localhost URL it prints).
 - Imported from `/workspace/tokenmax/home-vault` on Oct 23, 2026. node_modules, virtualenvs, logs and files over 20 MB were left out.
 - Personal details (emails, phone numbers, home street address) were replaced with `[redacted-…]` placeholders.
